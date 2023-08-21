@@ -1,7 +1,7 @@
 import { useCatFact } from "./hooks/useCatFact";
 import { useCatImage } from "./hooks/useCatImage";
 import { useRandomUser } from "./hooks/useRandomUser";
-import { UserCard } from "./components/userCard";
+import { UserCard } from "./components/UserCard";
 import { FactCard } from "./components/FactCard";
 import "./App.css";
 
