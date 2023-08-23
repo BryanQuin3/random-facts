@@ -3,6 +3,7 @@ import { useCatImage } from "./hooks/useCatImage";
 import { useRandomUser } from "./hooks/useRandomUser";
 import { UserCard } from "./components/UserCard";
 import { FactCard } from "./components/FactCard";
+import { Skeleton } from "@mui/material";
 import "./App.css";
 
 function App() {
@@ -20,7 +21,17 @@ function App() {
       <button onClick={handleclick}>Get new fact</button>
       <section className="card">
         <UserCard user={user} />
-        <FactCard fact={fact} imageUrl={imageUrl} />
+        {fact ? (
+          <FactCard fact={fact} imageUrl={imageUrl} />
+        ) : (
+          <Skeleton
+            sx={{ bgcolor: "grey.800" }}
+            animation="wave"
+            variant="rounded"
+            width={530}
+            height={160}
+          />
+        )}
       </section>
     </main>
   );
